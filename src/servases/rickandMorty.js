@@ -1,11 +1,13 @@
-export const fetchCharacter = (page = 1) => {
+
+
+export const fetchCharacter = (page) => {
   return fetch(`https://rickandmortyapi.com/api/character/?page=${page}`)
     .then(res => res.json())
-    .then(({ results }) => 
+    .then(({results} ) => 
       results.map(result => ({
         name: result.name,
         image: result.image,
-        gender: result.gender
+        gender: result.species
       }))
     );
 };

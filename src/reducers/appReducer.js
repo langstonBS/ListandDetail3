@@ -1,18 +1,16 @@
 export const initialState = {
+  characters: [],
+  page: 1,
   text: '',
-  backgroundColor: '#FFFFFF',
-  textColor: '#000000'
 };
 
 export default function reducer(state, action) {
   switch(action.type) {
-    case 'TEXT':
-      return { ...state, text: action.payload };
-    case 'BACKGROUND_COLOR':
-      return { ...state, backgroundColor: action.payload };
-    case 'TEXT_COLOR':
-      return { ...state, textColor: action.payload };
-    default:
-      return state;
+    case 'SET_CHARACTERS':
+      console.log('im here')
+      return { ...state, characters: action.payload };
+      default:
+        return state;
   }
+  
 }

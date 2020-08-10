@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 
 export const AppContext = React.createContext();
 
-export const useQuote = () => {
+export const useCharacter = () => {
   const { state } = useContext(AppContext);
-  return state.quote;
+  return state.characters;
 };
 
 export const useTheme = () => {

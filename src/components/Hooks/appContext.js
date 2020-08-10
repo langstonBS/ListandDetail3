@@ -7,6 +7,11 @@ export const useCharacter = () => {
   return state.characters;
 };
 
+export const usePage = () => {
+  const { state } = useContext(AppContext);
+  return state.page;
+};
+
 export const useTheme = () => {
   const { state } = useContext(AppContext);
   return state.theme;

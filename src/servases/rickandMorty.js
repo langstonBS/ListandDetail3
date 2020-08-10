@@ -7,7 +7,7 @@ export const fetchCharacter = (page) => {
       results.map(result => ({
         name: result.name,
         image: result.image,
-        gender: result.species
+        species: result.species
       }))
     );
 };

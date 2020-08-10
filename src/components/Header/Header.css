@@ -1,11 +1,5 @@
-.Header {
-  width: 5rem;
-  border: 0.2rem solid black;
-  border-radius: 5rem;
+.Header{
 
-  input {
-    display: none;
-  }
 
   label {
     display: block;
@@ -16,7 +10,7 @@
     background-color: white;
     transition: 0.2s;
   }
-
+  
   label::before {
     content: '';
     display: block;
@@ -24,9 +18,10 @@
     height: 1rem;
     border-radius: 100%;
   }
-
+  
   input:checked + label {
     background-color: black;
     margin-left: calc(5rem - 2rem);
   }
+
 }

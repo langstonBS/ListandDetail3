@@ -9,12 +9,12 @@ import {AppContext} from '../components/Hooks/appContext';
    console.log(initialState)
   
    useEffect(() => {
-    fetchCharacter(1)
+    fetchCharacter(state.page)
       .then(characters => dispatch({ type: 'SET_CHARACTERS', payload: characters }));
-   }, []);
- 
-  
-  return (
+   }, [state.page]);
+   console.log(state.page)
+
+   return (
     <AppContext.Provider value={{ state, dispatch }}>
       {children}
     </AppContext.Provider>

@@ -5,13 +5,10 @@ describe('app reducer', () => {
     const state = {
       theme: 'light'
     };
-
     const action = {
-      type: 'TOGGLE_THEME'
+      type: 'THEME'
     };
-
     const newState = reducer(state, action);
-
     expect(newState).toEqual({
       theme: 'dark'
     });
@@ -21,15 +18,38 @@ describe('app reducer', () => {
     const state = {
       theme: 'dark'
     };
-
     const action = {
-      type: 'TOGGLE_THEME'
+      type: 'THEME'
     };
-
     const newState = reducer(state, action);
-
     expect(newState).toEqual({
       theme: 'light'
+    });
+  });
+
+  it('It changes the page up one', () => {
+    const state = {
+      page: 1
+    };
+    const action = {
+      type: 'NEXT_PAGE'
+    };
+    const newState = reducer(state, action);
+    expect(newState).toEqual({
+      "page": 2
+    });
+  });
+
+  it('It changes the page down one', () => {
+    const state = {
+      page: 2
+    };
+    const action = {
+      type: 'PREVIOUS_PAGE'
+    };
+    const newState = reducer(state, action);
+    expect(newState).toEqual({
+      "page": 1
     });
   });
 });
